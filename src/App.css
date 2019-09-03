@@ -26,7 +26,7 @@ div.note {
   margin: 2px 0;
   position: absolute;
   cursor: -webkit-grab;
-  box-shadow: 5px 5px 15px 0 rgba(0, 0, 0, .2);
+  box-shadow: 5px 5px 15px 0 rgba(0, 0, 0, 0.2);
   overflow: hidden;
 }
 
@@ -38,7 +38,7 @@ div.note p {
   margin: 0;
   font-size: 22px;
   padding: 5px;
-  font-family: "Shadows Into Light", Arial;
+  font-family: 'Shadows Into Light', Arial;
 }
 
 div.note:hover > span {
@@ -50,7 +50,7 @@ div.note > span {
   bottom: 2px;
   right: 2px;
   opacity: 0;
-  transition: opacity .25s linear;
+  transition: opacity 0.25s linear;
 }
 
 div.note button {
@@ -59,7 +59,7 @@ div.note button {
 
 div.note > textarea {
   height: 75%;
-  background: rgba(255, 255, 255, .5);
+  background: rgba(255, 255, 255, 0.5);
 }
 
 .board > button {
