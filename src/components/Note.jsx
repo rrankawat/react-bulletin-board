@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Draggable from 'react-draggable';
 
 class Note extends Component {
   constructor(props) {
@@ -21,6 +22,13 @@ class Note extends Component {
     this.props.onChange(this.refs.newText.value, this.props.note.id);
     this.setState({ editing: false });
   };
+
+  componentDidUpdate() {
+    if (this.state.editing) {
+      this.refs.newText.focus();
+      this.refs.newText.select();
+    }
+  }
 
   renderForm() {
     return (
@@ -55,7 +63,9 @@ class Note extends Component {
 
   render() {
     return (
-      <div>{this.state.editing ? this.renderForm() : this.renderDisplay()}</div>
+      <Draggable>
+        {this.state.editing ? this.renderForm() : this.renderDisplay()}
+      </Draggable>
     );
   }
 }
